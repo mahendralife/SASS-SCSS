@@ -6,6 +6,11 @@ ol {
   padding: 0;
 }
 
+.pageX {
+  padding: 20;
+  padding: 10;
+}
+
 .alert-error, .alert-success, .alert {
   padding: 10px;
   border-radius: 5px;
@@ -22,6 +27,43 @@ ol {
 
 .example2 {
   color: red;
+}
+
+/*
+for loop
+*/
+.color-0 {
+  background: "red";
+}
+
+.color-1 {
+  background: "red";
+}
+
+.color-2 {
+  background: "red";
+}
+
+/*
+each
+*/
+.color-red {
+  background: "red";
+}
+
+.color-green {
+  background: "green";
+}
+
+/*
+@while
+*/
+.colorX-1 {
+  background: "red";
+}
+
+.colorX-2 {
+  background: "red";
 }
 
 body {
@@ -81,6 +123,10 @@ p {
   font: 12px/30px;
 }
 
+#main .pageX {
+  padding: 20;
+  padding: 10;
+}
 #main .alert, #main .alert-success, #main .alert-error {
   padding: 10px;
   border-radius: 5px;

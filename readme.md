@@ -110,3 +110,57 @@ we can used multiple @extend with single block
 
 -------------------------------------------------------------------
 # Control Directives & Expressions
+Control directives are an advanced feature, and are uncommon in day-to-day styling. They exist mainly for use in mixins, particularly those that are part of libraries like Compass, and so require substantial flexibility.
+
+<ul>
+  <li>if()</li>
+  <li>@for()</li>
+  <li>@each()</li>
+  <li>@while()</li>
+</ul>
+
+# @if
+```
+  $list: 'style-1';
+
+  .pageX {
+      @if $list == 'style-1' {
+      @extend %equal-heights;
+      }
+  }
+```
+
+# @For
+```
+  $color : (1,2,3);
+
+  @for $i from 0 to length($color) {
+      .color-#{$i} {
+          @include setBgColor('red');
+      }
+  }
+```
+
+# @each
+```
+  $colors : ('red', 'green');
+  
+  @each $color in $colors{
+  @warn $color;
+      .color-#{$color} {
+          @include setBgColor($color);
+      }
+  }
+```
+# @while
+```
+  $colors : ('red', 'green');
+  $counter : 0;
+  @while $counter < length($color)-1{
+  $counter: $counter+1;
+  @warn 'asdas'+ length($color);
+  .color-#{$counter} {
+          @include setBgColor('red');
+      }
+  }
+```
