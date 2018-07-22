@@ -1,0 +1,21 @@
+%equal-heights {
+  @include layout(10, 20);  
+}
+
+%alert {
+    
+    padding: 10px;
+    border-radius: 5px;
+    color:#000;
+
+}
+
+.example {
+  color: red;
+}
+.example1 {
+  color: red;
+}
+.example2 {
+  color: red;
+}

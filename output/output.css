@@ -1,0 +1,128 @@
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+.alert-error, .alert-success, .alert {
+  padding: 10px;
+  border-radius: 5px;
+  color: #000;
+}
+
+.example {
+  color: red;
+}
+
+.example1 {
+  color: red;
+}
+
+.example2 {
+  color: red;
+}
+
+body {
+  color: "#8e2c2c";
+  font: 100% Helvetica, sans-serif;
+}
+
+ul {
+  color: "#8e2c2c";
+}
+ul li {
+  color: "#8e2c2c";
+}
+ul li a {
+  color: "#8e2c2c";
+}
+
+.alert {
+  width: 2.5 px;
+}
+
+.alert-success {
+  color: green;
+  border: 1px green solid;
+}
+.alert .alert-success:hover {
+  text-decoration: underline;
+}
+
+.funky {
+  font: 20px/24px fantasy;
+  font-weight: bold;
+}
+
+.alert-error {
+  color: red;
+  border: 1px red solid;
+}
+
+body.firefox .header:before {
+  content: "Hi, Firefox users!";
+}
+
+p {
+  cursor: e-resize;
+}
+
+.foo.bar .baz.bang, .bip.qux {
+  font: Droid+Sans;
+  background: red;
+}
+.foo.bar .baz.bang:hover, .bip.qux:hover {
+  color: red;
+}
+
+p {
+  font: 12px/30px;
+}
+
+#main .alert, #main .alert-success, #main .alert-error {
+  padding: 10px;
+  border-radius: 5px;
+  color: #000;
+}
+#main .example {
+  color: red;
+}
+#main .example1 {
+  color: red;
+}
+#main .example2 {
+  color: red;
+}
+
+.sidebar {
+  width: 300px;
+}
+@media screen and (max-width: 300px) {
+  .sidebar {
+    width: 500px;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  .sidebar {
+    width: 500px;
+  }
+}
+#context a.notice {
+  color: blue;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+@media print {
+  .page {
+    width: 8in;
+  }
+}
+.page {
+  color: red;
+}
+
+/*# sourceMappingURL=output.css.map */

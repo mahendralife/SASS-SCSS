@@ -1,0 +1,113 @@
+body {
+    color: $primary-color;
+    font: 100% $font-stack;
+}
+
+// menu structure  
+ul {
+       color: $primary-color;
+       li {
+           color: $primary-color; 
+           a {
+              color: $primary-color;
+           }
+        }
+}
+
+.alert { 
+    @extend %alert;
+  
+    width:((100-50)/20)px;
+}
+
+.alert-success { 
+   
+    .alert &:hover { text-decoration: underline; }
+    @extend %alert;
+    color: green;
+    border: 1px  green solid;
+
+}
+.funky {
+  font: 20px/24px fantasy {
+    weight: bold;
+  }
+}
+.alert-error { 
+    @extend %alert;
+    color: red;
+    border: 1px  red solid;
+}
+
+@mixin firefox-message($selector) {
+  body.firefox #{$selector}:before {
+    content: "Hi, Firefox users!";
+  }
+}
+
+@include firefox-message(".header");
+p {
+  cursor: e + -resize;
+}
+
+.foo.bar .baz.bang, .bip.qux {
+  $selector: &;
+  $family: unquote("Droid+Sans");
+  font:$family;
+  background: red;
+   @if  $selector {
+    &:hover {
+      color: red;
+    }
+  } @else {
+    a {
+      color: red;
+    }
+  }
+}
+p {
+  $font-size: 12px;
+  $line-height: 30px;
+  font: #{$font-size}/#{$line-height};
+}
+
+#main {
+   @import "extend";
+}
+
+.sidebar {
+  width: 300px;
+  @media screen and (max-width:300px) {
+    width: 500px;
+  }
+}
+
+$media: screen;
+$feature: -webkit-min-device-pixel-ratio;
+$value: 1.5;
+
+@media #{$media} and ($feature: $value) {
+  .sidebar {
+    width: 500px;
+  }
+}
+
+#context a%extreme1 {
+  color: blue;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.notice {
+  @extend %extreme1;
+   @warn "Assuming  to be in pixels";
+}
+
+@media print {
+  .page {
+    width: 8in;
+    @at-root ( without: media) {
+      color: red;
+    }
+  }
+}

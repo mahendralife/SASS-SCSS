@@ -1,0 +1,22 @@
+@mixin transform($property) {
+  -webkit-transform: $property;
+      -ms-transform: $property;
+      -moz-transform: $property;
+      -o-transform: $property;
+        transform: $property;
+}
+
+@mixin opacity($property) {
+    -webkit-opacity: $property;
+    -ms-opacity: $property;
+    -moz-opacity: $property;
+    -o-opacity: $property;
+     opacity: $property;
+}
+
+@mixin layout($margin , $padding) {
+    padding: $padding;
+    padding: $margin;
+}
+
+
