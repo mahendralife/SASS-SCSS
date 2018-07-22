@@ -1,9 +1,9 @@
-# How to step a project with SCSS 
+#How to step a project with SCSS 
   Open nodejs terminal and fowllow below steps
 
-# Create project director
+#Create project director
 
-# mkdir SCSS-project
+#mkdir SCSS-project
 
 #navigate to project folder
 cd SCSS-project
@@ -11,15 +11,15 @@ cd SCSS-project
 #Install sass on local machine
 npm install -g sass 
 
-# Generate SCSS to css file 
-# this commond always watch your SCSS file if any changes are made by SCSS file 
-# CSS file will auto updated 
-# run the below commond
+#Generate SCSS to css file 
+#this commond always watch your SCSS file if any changes are made by SCSS file 
+#CSS file will auto updated 
+#run the below commond
 
 sass --watch base.scss ./output/output.css
 
-# base.scss : main file of SCSS which is import all scss file 
-# output.css : this is css file include all css code that you write on scss file
+#base.scss : main file of SCSS which is import all scss file 
+#output.css : this is css file include all css code that you write on scss file
 
 # --watch : commond always LISTEN changes for SCSS file 
 #Referencing Parent Selectors: &
@@ -31,7 +31,7 @@ body.firefox & { font-weight: normal; }
 }
 #Nested Properties 
 .alert {
-color: black; 
+  color: black; 
 }
 .alert-success {
   border: 1px solid; }
@@ -43,8 +43,8 @@ If you have a SCSS or Sass file that you want to import but don't want to compil
 #main {
   @import "example"; 
 }
-import all selector from the file example
 
+import all selector from the file example
 # @extend
 #The @extend directive avoids these problems by telling Sass that one selector should inherit the styles of another selector
 .error {
