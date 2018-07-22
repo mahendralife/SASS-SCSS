@@ -30,11 +30,12 @@ a {
 ```
 # Nested Properties 
 ```
-.alert {
-  color: black; 
-}
-.alert-success {
-  border: 1px solid; }
+  .alert {
+    color: black; 
+    .alert-success {
+      border: 1px solid; 
+    }
+  }
  ```
 # SASS Directive
 # @import 
