@@ -1,32 +1,33 @@
 # How to step a project with SCSS 
-  <b>Follow below steps</b>
-  <ul>
-    <li> Create project directory (eg mkdir project_name)</li>
-    <li> Navigate to project folder (eg. cd poject_name)</li>
-  </ul>
+<b>Follow below steps</b>
+<ul>
+<li> Create project directory (eg mkdir project_name)</li>
+<li> Navigate to project folder (eg. cd poject_name)</li>
+</ul>
 
 # Install sass on local machine
-  npm install -g sass
+npm install -g sass
 
-  <b>Generate SCSS to css file</b>
-  The below commond always watch your SCSS file if any changes are made by SCSS file 
-  CSS file will automatically updated,  run the below   
+<b>Generate SCSS to css file</b>
+The below commond always watch your SCSS file if any changes are made by SCSS file 
+CSS file will automatically updated,  run the below   
 
-  sass --watch base.scss ./output/output.css
-  <ul>
-   <li>base.scss : main file of SCSS which is import all scss file</li>
-   <li>output.css : this is css file include all css code that you write on scss file</li>
-   <li>--watch : commond always LISTEN changes for SCSS file</li>
-   <li>Referencing Parent Selectors: &</li>
-  </ul>
- ```
+sass --watch base.scss ./output/output.css
+<ul>
+<li>base.scss : main file of SCSS which is import all scss file</li>
+<li>output.css : this is css file include all css code that you write on scss file</li>
+<li>--watch : commond always LISTEN changes for SCSS file</li>
+<li>Referencing Parent Selectors: & </li>
+</ul>
+
+```
 a {
   font-weight: bold;
   text-decoration: none;
   &:hover { text-decoration: underline; }
   body.firefox & { font-weight: normal; }
 }
- ```
+```
 # Nested Properties 
 ```
 .alert {
@@ -38,38 +39,38 @@ a {
 # SASS Directive
 # @import 
 If you have a SCSS or Sass file that you want to import but don't want to compile to a CSS file, you can add an underscore to the beginning of the filename. This will tell Sass not to compile it to a normal CSS file. You can then import these files without using the underscore.
- ```
-#main {
-  @import "example"; 
-}
- ```
+```
+  #main {
+    @import "example"; 
+  }
+```
 import all selector from the file example
 # @extend
 #The @extend directive avoids these problems by telling Sass that one selector should inherit the styles of another selector
- ```
-.error {
-  border: 1px #f00;
-  background-color: #fdd;
+```
+  .error {
+    border: 1px #f00;
+    background-color: #fdd;
+    }
+  .seriousError {
+    @extend .error;
+    @extend .success;
+    border-width: 3px;
   }
-.seriousError {
-  @extend .error;
-  @extend .success;
-  border-width: 3px;
-}
- ```
+```
 we can used multiple @extend with single block
 % Operators
- ```
-#context a%extreme {
-  color: blue;
-  font-weight: bold;
-  font-size: 2em;
-}
+```
+  #context a%extreme {
+    color: blue;
+    font-weight: bold;
+    font-size: 2em;
+  }
 
-.notice {
-  @extend %extreme;
-}
- ```
+  .notice {
+    @extend %extreme;
+  }
+```
 
 # @media
   @media queries can also be nested within one another. The queries will then be combined using the and operator
