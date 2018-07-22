@@ -1,26 +1,22 @@
 # How to step a project with SCSS 
   Open nodejs terminal and fowllow below steps
-
-# Create project director
-
-# mkdir SCSS-project
-
-# navigate to project folder
-cd SCSS-project
+  Create project director
+  mkdir SCSS-project
+  navigate to project folder
+  cd SCSS-project
 
 # Install sass on local machine
-npm install -g sass 
+  npm install -g sass 
 
-# Generate SCSS to css file 
-# this commond always watch your SCSS file if any changes are made by SCSS file 
-# CSS file will auto updated 
-# run the below commond
+  Generate SCSS to css file 
+  this commond always watch your SCSS file if any changes are made by SCSS file 
+  CSS file will auto updated 
+  run the below commond
 
 sass --watch base.scss ./output/output.css
 
 # base.scss : main file of SCSS which is import all scss file 
 # output.css : this is css file include all css code that you write on scss file
-
 # --watch : commond always LISTEN changes for SCSS file 
 # Referencing Parent Selectors: &
  ```
