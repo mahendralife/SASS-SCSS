@@ -72,7 +72,7 @@ we can used multiple @extend with single block
 
 # @media
 
-#@media queries can also be nested within one another. The queries will then be combined using the and operator
+@media queries can also be nested within one another. The queries will then be combined using the and operator
 @media screen {
   .sidebar {
     @media (orientation: landscape) {
@@ -90,6 +90,7 @@ The @at-root directive causes one or more rules to be emitted at the root of the
     }
   }
 }
+
 @at-root (without: media supports)
 
 # @debug 
